@@ -1,0 +1,5 @@
+# archivo: _toc.yml 
+format: jb-book
+root:   inicio
+chapters:
+  - file: page1

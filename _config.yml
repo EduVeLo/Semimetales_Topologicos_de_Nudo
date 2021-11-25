@@ -1,0 +1,37 @@
+# archivo: -config.yml
+title: "Semimetales Topologicos de Nudo"
+author: EduVeLo
+logo: images/FQ-bw.png
+
+launch_buttons:
+  colab_url: https://colab.research.google.com # The URL of Google Colab (e.g., https://colab.research.google.com)
+  binderhub_url: https://mybinder.org
+  thebe: true
+
+repository:
+  url            : https://github.com/EduVeLo/Semimetales_Topologicos_de_Nudo  # The URL to your book's repository
+  branch         : master  # Which branch of the repository should be used when creating links
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+
+execute: 
+  execute_notebooks: "force"
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - math
+    - dollarmath
+    - linkify
+    - substitution
+    - colon_fence 
