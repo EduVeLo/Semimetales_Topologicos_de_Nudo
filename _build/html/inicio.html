@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ahora estudiamos el código asociado al Nodal Line inclinado" href="NLInclinado.html" />
+    <link rel="next" title="Semimetal Topologico de Nodal Line inclinado" href="NLInclinado.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,7 +100,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="NLInclinado.html">
-   Ahora estudiamos el código asociado al Nodal Line inclinado
+   Semimetal Topologico de Nodal Line inclinado
   </a>
  </li>
  <li class="toctree-l1">
@@ -189,6 +189,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nudos-toroidales">
+   Nudos Toroidales
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -199,38 +212,49 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="semimetales-topologicos-de-nudo">
 <h1>Semimetales Topologicos de Nudo<a class="headerlink" href="#semimetales-topologicos-de-nudo" title="Permalink to this headline">¶</a></h1>
-<p>En este jbook nosotros estudiamos un modelo de semimetales topológicos de nudo, a partir de un hamiltoniano de dos niveles en el espacio de momentos. Para entender los elementos del modelo, primero se realizará un mapeo de Hopf sobre la 3-esfera <span class="math notranslate nohighlight">\(\mathbb{S}^3\)</span>, lo que consiste en generar una esfera apartir de lazos cerrados, en el que solo se hará para una superficie toroidal, estos lazos corresponderán a los nudos toroidales. Entonces con los nudos toroidales propondremos nuestro modelo general para un hamiltoniano continuo que describa nodos de nudo, este modelo hereda la topología del toro y estos nodods describen un semimetal topológico de líneas nodales. Después, tomaremos los casos particulares de nuestros modelos continuos y propondremos un modelo de red, con el modulo pythtb de Python se explorarán las estructuras de bandas para nuestro modelo de banda de redes con condiciones de frontera abierta y se presentarán los estados de borde para cada uno de los modelos de red.
-\section{Nudos Toroidales}
-Las líneas nodales surgen en la intersección de dos bandas, por ello consideremos un hamiltoniano de dos nivels asociada a dos bandas adyacentes,
-\begin{align*}
+<p>En este jbook nosotros estudiamos un modelo de semimetales topológicos de nudo, a partir de un hamiltoniano de dos niveles en el espacio de momentos. Para entender los elementos del modelo, primero se realizará un mapeo de Hopf sobre la 3-esfera <span class="math notranslate nohighlight">\(\mathbb{S}^3\)</span>, lo que consiste en generar una esfera apartir de lazos cerrados, en el que solo se hará para una superficie toroidal, estos lazos corresponderán a los nudos toroidales. Entonces con los nudos toroidales propondremos nuestro modelo general para un hamiltoniano continuo que describa nodos de nudo, este modelo hereda la topología del toro y estos nodods describen un semimetal topológico de líneas nodales. Después, tomaremos los casos particulares de nuestros modelos continuos y propondremos un modelo de red, con el modulo pythtb de Python se explorarán las estructuras de bandas para nuestro modelo de banda de redes con condiciones de frontera abierta y se presentarán los estados de borde para cada uno de los modelos de red.</p>
+<div class="section" id="nudos-toroidales">
+<h2>Nudos Toroidales<a class="headerlink" href="#nudos-toroidales" title="Permalink to this headline">¶</a></h2>
+<p>Las líneas nodales surgen en la intersección de dos bandas, por ello consideremos un hamiltoniano de dos niveles asociada a dos bandas adyacentes,</p>
+<p>\begin{align}
 H(\mathbf{k})=a_0(\mathbf{k})\mathbb{I}+\mathbf{a}(\mathbf{k})\cdot\mathbf{\sigma} \quad \mathbf{\sigma}={\sigma_x,\sigma_y,\sigma_z}
-\end{align*}
-La simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> en el hamiltoniano, impone que <span class="math notranslate nohighlight">\(H^*(\mathbf{k})=H(\mathbf{k})\)</span>, así en el modelo de dos bandas se tiene que <span class="math notranslate nohighlight">\(a_2(\mathbf{k})=0\)</span>, en adición, queremos que en el modelo las energías sean simétricos respecto a la energía cero lo que lleva <span class="math notranslate nohighlight">\(a_0(\mathbf{k})\)</span>=0. Nuestro modelo de dos bandas empleado es: $<span class="math notranslate nohighlight">\(H(\mathbf{k})=a_1(\mathbf{k})\sigma_x+a_3(\mathbf{k})\sigma_z,\)</span><span class="math notranslate nohighlight">\( la relación de dispersión de este hamilotniano es \)</span><span class="math notranslate nohighlight">\(E_s(\mathbf{k})=s\sqrt{a_1^2(\mathbf{k})+a_3^2(\mathbf{k})},\quad s=\pm,\)</span><span class="math notranslate nohighlight">\( la generación de nodos sucede cuando la energía es \)</span>E=0<span class="math notranslate nohighlight">\(, donde las bandas s se tocan, lo que sucede con las condiciones \)</span><span class="math notranslate nohighlight">\(a_1(\mathbf{k})=a_3(\mathbf{k})=0.\)</span>$</p>
-<p>Ahora introducimos una construcción genérica para la aproximación de modelos de nudos nodales, a partir del mapeos de Hoppf.</p>
+\end{align}</p>
+<p>La simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> en el hamiltoniano, impone que <span class="math notranslate nohighlight">\(H^*(\mathbf{k})=H(\mathbf{k})\)</span>, así en el modelo de dos bandas se tiene que <span class="math notranslate nohighlight">\(a_2(\mathbf{k})=0\)</span>, en adición, queremos que en el modelo las energías sean simétricos respecto a la energía cero lo que lleva <span class="math notranslate nohighlight">\(a_0(\mathbf{k})\)</span>=0. Nuestro modelo de dos bandas empleado es:</p>
+<p><span class="math notranslate nohighlight">\(H(\mathbf{k})=a_1(\mathbf{k})\sigma_x+a_3(\mathbf{k})\sigma_z,\)</span></p>
+<p>la relación de dispersión de este hamilotniano es</p>
+<p><span class="math notranslate nohighlight">\(E_s(\mathbf{k})=s\sqrt{a_1^2(\mathbf{k})+a_3^2(\mathbf{k})},\quad s=\pm,\)</span></p>
+<p>la generación de nodos sucede cuando la energía es <span class="math notranslate nohighlight">\(E=0\)</span>, donde las bandas s se tocan, lo que sucede con las condiciones:</p>
+<p><span class="math notranslate nohighlight">\(a_1(\mathbf{k})=a_3(\mathbf{k})=0.\)</span></p>
+<p>Ahora introducimos una construcción genérica para la aproximación de modelos de nudos nodales, a partir del mapeos de Hopf.</p>
 <p>Antes de presentar el modelo correspondiente al mapeo, definamos algunos de los conceptos a desarrollar.</p>
-<p>Primero tomemos dos variables complejas <span class="math notranslate nohighlight">\(\mathit{z}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w}\)</span>, con la constricción <span class="math notranslate nohighlight">\(|\mathit{z}|^2+|\mathit{w}|^2=1\)</span>, lo cual describe una 3-esfera <span class="math notranslate nohighlight">\(\mathbb{S}^3\)</span>\footnote{Esta proposición se observa si tomamos <span class="math notranslate nohighlight">\(\mathit{z=n_1+\I n_2}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w=n_3+\I n_4}\)</span>, $<span class="math notranslate nohighlight">\(\mathit{(n_1+\I n_2)(n_1-\I n_2)^2+(n_3+\I n_4)^2(n_3-\I n_4)^2=n_1^2+n_2^2+n_3^2+n_4^2=1.}\)</span><span class="math notranslate nohighlight">\(}, consideremos la siguiente superficie sobre la 3-esfera \)</span><span class="math notranslate nohighlight">\(|\mathit{z}|^p=|\mathit{w}|^q\quad (p,q)\in\mathbb{Z}^{2+} \quad \text{Enteros positivos,}\)</span><span class="math notranslate nohighlight">\( esta superficie es topológicamente un 2-toro. Este hecho resulta de expresar nuestros numeros complejos con la identidad de euler\)</span>\mathit{z}=|\mathit{z}|e^{\I\theta_\mathit{z}}<span class="math notranslate nohighlight">\( y \)</span>\mathit{w}=|\mathit{w}|e^{\I\theta_\mathit{w}}<span class="math notranslate nohighlight">\(, de esta forma, al costreñir nuestras variables complejas en la 3-esfera \)</span>|\mathit{z}|^2+|\mathit{w}|^2=1<span class="math notranslate nohighlight">\( los modulos asociados a los números complejos queda fijo, esto es que:
-\begin{align*}
-   |\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1  \\
-   |\mathit{z}|^p &amp;= |\mathit{w}|^q \\
-\end{align*}
-para resolver este sistema de ecuaciones, la segunda ecuación lo elevamos al exponente \)</span>\frac{2}{p}<span class="math notranslate nohighlight">\( y pasamos restando,
-\begin{align*}
-  |\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1 \\
-  |\mathit{z}|^2-|\mathit{w}|^{\frac{2q}{p}} &amp;= 0; \\
-  |\mathit{w}|^2 + |\mathit{w}|^{\frac{2q}{p}} &amp;= 1;
-\end{align*}
- así, los radios ahora están fijos y la superficie está parametrizada por las fases \)</span>\theta_\mathit{z}<span class="math notranslate nohighlight">\( y \)</span>\theta_\mathit{w}$, que están asociados a la dirección toroidal y poloidal, respectivamente.</p>
+<p>Primero tomemos dos variables complejas <span class="math notranslate nohighlight">\(\mathit{z}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w}\)</span>, con la constricción <span class="math notranslate nohighlight">\(|\mathit{z}|^2+|\mathit{w}|^2=1\)</span>, lo cual describe una 3-esfera <span class="math notranslate nohighlight">\(\mathbb{S}^3\)</span> (Esta proposición se observa si tomamos <span class="math notranslate nohighlight">\(\mathit{z=n_1+\mathbf{i} n_2}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w=n_3+\mathbf{i} n_4}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\mathit{(n_1+\mathbf{i} n_2)(n_1-\mathbf{i} n_2)+(n_3+\mathbf{i} n_4)(n_3-\mathbf{i} n_4)=n_1^2+n_2^2+n_3^2+n_4^2=1.} \quad )\)</span></p>
+<p>, consideremos la siguiente superficie sobre la 3-esfera</p>
+<p><span class="math notranslate nohighlight">\(|\mathit{z}|^p=|\mathit{w}|^q\quad (p,q)\in\mathbb{Z}^{2+} \quad \text{Enteros positivos,}\)</span></p>
+<p>esta superficie es topológicamente un 2-toro. Este hecho resulta de expresar nuestros numeros complejos con la identidad de euler<span class="math notranslate nohighlight">\(\mathit{z}=|\mathit{z}|e^{\mathbf{i}\theta_\mathit{z}}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w}=|\mathit{w}|e^{\mathbf{i}\theta_\mathit{w}}\)</span>, de esta forma, al costreñir nuestras variables complejas en la 3-esfera <span class="math notranslate nohighlight">\(|\mathit{z}|^2+|\mathit{w}|^2=1\)</span> los modulos asociados a los números complejos queda fijo, esto es que:</p>
+<p>\begin{align}
+|\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1  \
+|\mathit{z}|^p &amp;= |\mathit{w}|^q \
+\end{align}</p>
+<p>para resolver este sistema de ecuaciones, la segunda ecuación lo elevamos al exponente <span class="math notranslate nohighlight">\(\frac{2}{p}\)</span> y pasamos restando,</p>
+<p>\begin{align}
+|\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1 \
+|\mathit{z}|^2-|\mathit{w}|^{\frac{2q}{p}} &amp;= 0; \
+|\mathit{w}|^2 + |\mathit{w}|^{\frac{2q}{p}} &amp;= 1;
+\end{align}</p>
+<p>así, los radios ahora están fijos y la superficie está parametrizada por las fases <span class="math notranslate nohighlight">\(\theta_\mathit{z}\)</span> y <span class="math notranslate nohighlight">\(\theta_\mathit{w}\)</span>, que están asociados a la dirección toroidal y poloidal, respectivamente.</p>
 <p>Dada las constricciones anteriores, proponemos una función de dos variables  complejas,$<span class="math notranslate nohighlight">\(\mathit{f(z,w)\equiv z^p+w^q=0,}\)</span><span class="math notranslate nohighlight">\(, está función representa una superficie, si sobre está superficie le añadimos las dos constricciones anteriores, esto es equivalente a imponer una constricción sobre el toro, lo cual nos lleva a definir líneas, los cuales corresponden a los nudos toroidales, 
-\begin{align*}
+\begin{align}
 	|\mathit{z}|^pe^{\I p\theta_\mathit{z}}+\mathit{w}^qe^{\I q\theta_\mathit{w}}&amp;=0\quad \text{Expresando con la identidad de Euler}\\
 |\mathit{z}|^p\big(e^{\I p\theta_\mathit{z}}+e^{\I q \theta_\mathit{w}}\big)&amp;=0 \quad \text{donde}\quad|\mathit{z}|^p=|\mathit{w}|^q \\
 e^{\I p \theta_\mathit{z}}&amp;=-e^{\I q \theta_\mathit{w}}\quad \text{Multiplicamos por} \quad e^{-\I q \theta_\mathit{w}}\\
 e^{\I p \theta_\mathit{z}-\I q \theta_\mathit{w}}&amp;=-1=e^{-\I\pi}\\
  p \theta_\mathit{z}- q \theta_\mathit{w}&amp;=\pi \quad \text{(mod \)</span>2\pi$)}
-\end{align*}
+\end{align}
 Esta ecuacion define nudos para los valores de p y q primos relativos, en otros casos forma links.</p>
 <p>Con estos nudos tomamos los ceros de nuestra función <span class="math notranslate nohighlight">\(mathit{f(z,w)}\)</span> para las energías de Fermi de nuestro modelo, la parte real e imaginaria de <span class="math notranslate nohighlight">\(\mathit{f}\)</span> estarán asociados a nuestras dos funciones en nuestro modelo de bandas. Tomamos
 $<span class="math notranslate nohighlight">\(a_1=\mathbb{R}e(f) \quad a_3=\mathbb{I}m(f)\)</span>$</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -263,7 +287,7 @@ $<span class="math notranslate nohighlight">\(a_1=\mathbb{R}e(f) \quad a_3=\math
     <a class='right-next' id="next-link" href="NLInclinado.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ahora estudiamos el código asociado al Nodal Line inclinado</p>
+        <p class="prev-next-title">Semimetal Topologico de Nodal Line inclinado</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

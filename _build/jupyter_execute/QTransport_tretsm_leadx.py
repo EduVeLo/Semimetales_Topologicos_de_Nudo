@@ -6,7 +6,7 @@
 # En el modelo tenemos un hamiltoniano effectivo de la aproximación de amarre fuerte, que se produce con los primos relativos (3,2), donde se incluye simetría $\mathcal{PT}$ y simetría de electrón-hueco $\mathcal{\Xi}$. Primero se plantea el hamiltoniano continuo a bajas energias, el cual esta asociado con las funciones:
 # 
 # \begin{align}
-# a_1(\vec{k}) &=k_x^3-3k_Xk_y^2+k_z^2-(m-0.5k^2)^2 \quad; \quad a_3(\vec{k})= 3k_x^2k_y-k_y^3+k_z(2m-k^2)\\
+# a_1(\vec{k}) &=k_x^3-3k_Xk_y^2+k_z^2-(m-0.5k^2)^2 \quad ; \quad a_3(\vec{k})= 3k_x^2k_y-k_y^3+k_z(2m-k^2) \\
 # H(\vec{k}) &= a_1\cdot \sigma_x + a_3\cdot \sigma_z +m_z\cdot \sigma_z 
 # \end{align}
 # En este sistema finito analizamos la conductancia y las estructura de bandas en una terminal con el eje periódico en una dirección. 
