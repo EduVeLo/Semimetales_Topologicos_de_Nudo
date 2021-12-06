@@ -16,21 +16,18 @@ latex:
   latex_documents:
     targetname: book.tex
 
-bibtex_bibfiles:
-  - references.bib
-
 sphinx:
   config:
     bibtex_reference_style: author_year
 
 execute: 
-  execute_notebooks: "force"
+  execute_notebooks: "off"
 
 parse:
   myst_enable_extensions:
     # don't forget to list any other extensions you want enabled,
     # including those that are enabled by default!
-    - math
+    - amsmath 
     - dollarmath
     - linkify
     - substitution

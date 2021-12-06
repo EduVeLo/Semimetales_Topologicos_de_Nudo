@@ -183,13 +183,13 @@ def Nodos(NN, m0=2.8,mz=0):
     return array(Mesh)
 
 
-# In[4]:
+# In[9]:
 
 
 get_ipython().run_cell_magic('time', '', '# Generamos los puntos que nos dan Energía cero en nuestro hamiltoniano continuo\n# Exploración de las energías de Fermi para E=0,con distinto parametro m0\nNN = 101\nm0 = [ 1.2, 2.8, 3.2]\nmesh = []\nl=0\nfor i in range(len(m0)):\n    mesh1=Nodos( NN, m0[i], 0)\n    if ( len( mesh1) != 0):\n        mesh1tb = mesh1 / (2*pi)\n        mesh.append(mesh1tb)\n        l+=1\n    else :\n        print(f\'No hay Estados con E=0 para $m_0$={m0[i]}\')\n# Generamos un subplot de los nodos en el espacio de momentos\nfig = plt.figure(figsize=(20, 4), dpi=100)\nfig.tight_layout(pad=0.4, w_pad=2.0, h_pad=2.0)\nfig.suptitle(\'Transiciones en el modelo de Nudo de Trebol de Líneas Nodales\', fontsize = 18)\nfor i in range(l):\n    i_1= i + 1\n    ax = fig.add_subplot(1, l , i_1, projection=\'3d\')\n    ax.scatter( mesh[i].T[0], mesh[i].T[1], mesh[i].T[2])\n    ax.set_title(f\'$m_0$={m0[i]}\')\n    ax.set_xlabel(\'$k_x$\', fontsize = 14)\n    ax.set_xticks([-0.5, -0.25, 0, 0.25, 0.5])\n    ax.set_xticklabels([r\'$-\\pi$\', r\'$-\\pi/2$\', r\'0\', r\'$\\pi/2$\', r\'$\\pi$\'])\n    ax.set_ylabel(\'$k_y$\', fontsize = 14)\n    ax.set_yticks([-0.5, -0.25, 0, 0.25, 0.5])\n    ax.set_yticklabels([r\'$-\\pi$\', r\'$-\\pi/2$\', r\'0\', r\'$\\pi/2$\', r\'$\\pi$\'])\n    ax.set_zlabel(\'$k_z$\', fontsize = 14)\n    ax.set_zticks([-0.5, -0.25, 0, 0.25, 0.5])\n    ax.set_zticklabels([r\'$-\\pi$\', r\'$-\\pi/2$\', r\'0\', r\'$\\pi/2$\', r\'$\\pi$\'])\n    ax.view_init(20,-45)\nfig.savefig("TransicionesTrNLsinMasa.pdf")')
 
 
-# In[5]:
+# In[16]:
 
 
 #Proyecciones de las superficies de Fermi en los planos canonicos 
