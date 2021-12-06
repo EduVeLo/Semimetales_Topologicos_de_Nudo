@@ -216,9 +216,10 @@
 <div class="section" id="nudos-toroidales">
 <h2>Nudos Toroidales<a class="headerlink" href="#nudos-toroidales" title="Permalink to this headline">¶</a></h2>
 <p>Las líneas nodales surgen en la intersección de dos bandas, por ello consideremos un hamiltoniano de dos niveles asociada a dos bandas adyacentes,</p>
-<p>\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-155f4cc5-c757-4707-8210-61e1815e9789">
+<span class="eqno">(1)<a class="headerlink" href="#equation-155f4cc5-c757-4707-8210-61e1815e9789" title="Permalink to this equation">¶</a></span>\[\begin{align}
 H(\mathbf{k})=a_0(\mathbf{k})\mathbb{I}+\mathbf{a}(\mathbf{k})\cdot\mathbf{\sigma} \quad \mathbf{\sigma}={\sigma_x,\sigma_y,\sigma_z}
-\end{align}</p>
+\end{align}\]</div>
 <p>La simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> en el hamiltoniano, impone que <span class="math notranslate nohighlight">\(H^*(\mathbf{k})=H(\mathbf{k})\)</span>, así en el modelo de dos bandas se tiene que <span class="math notranslate nohighlight">\(a_2(\mathbf{k})=0\)</span>, en adición, queremos que en el modelo las energías sean simétricos respecto a la energía cero lo que lleva <span class="math notranslate nohighlight">\(a_0(\mathbf{k})\)</span>=0. Nuestro modelo de dos bandas empleado es:</p>
 <p><span class="math notranslate nohighlight">\(H(\mathbf{k})=a_1(\mathbf{k})\sigma_x+a_3(\mathbf{k})\sigma_z,\)</span></p>
 <p>la relación de dispersión de este hamilotniano es</p>
@@ -232,26 +233,29 @@ H(\mathbf{k})=a_0(\mathbf{k})\mathbb{I}+\mathbf{a}(\mathbf{k})\cdot\mathbf{\sigm
 <p>, consideremos la siguiente superficie sobre la 3-esfera</p>
 <p><span class="math notranslate nohighlight">\(|\mathit{z}|^p=|\mathit{w}|^q\quad (p,q)\in\mathbb{Z}^{2+} \quad \text{Enteros positivos,}\)</span></p>
 <p>esta superficie es topológicamente un 2-toro. Este hecho resulta de expresar nuestros numeros complejos con la identidad de euler<span class="math notranslate nohighlight">\(\mathit{z}=|\mathit{z}|e^{\mathbf{i}\theta_\mathit{z}}\)</span> y <span class="math notranslate nohighlight">\(\mathit{w}=|\mathit{w}|e^{\mathbf{i}\theta_\mathit{w}}\)</span>, de esta forma, al costreñir nuestras variables complejas en la 3-esfera <span class="math notranslate nohighlight">\(|\mathit{z}|^2+|\mathit{w}|^2=1\)</span> los modulos asociados a los números complejos queda fijo, esto es que:</p>
-<p>\begin{align}
-|\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1  \
-|\mathit{z}|^p &amp;= |\mathit{w}|^q \
-\end{align}</p>
+<div class="amsmath math notranslate nohighlight" id="equation-57d14366-8477-43df-b0e7-f4cd2eab7b03">
+<span class="eqno">(2)<a class="headerlink" href="#equation-57d14366-8477-43df-b0e7-f4cd2eab7b03" title="Permalink to this equation">¶</a></span>\[\begin{align}
+   |\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1  \\
+   |\mathit{z}|^p &amp;= |\mathit{w}|^q \\
+\end{align}\]</div>
 <p>para resolver este sistema de ecuaciones, la segunda ecuación lo elevamos al exponente <span class="math notranslate nohighlight">\(\frac{2}{p}\)</span> y pasamos restando,</p>
-<p>\begin{align}
-|\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1 \
-|\mathit{z}|^2-|\mathit{w}|^{\frac{2q}{p}} &amp;= 0; \
-|\mathit{w}|^2 + |\mathit{w}|^{\frac{2q}{p}} &amp;= 1;
-\end{align}</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a5475b8a-17d7-411f-aa3e-3e5bef07ec22">
+<span class="eqno">(3)<a class="headerlink" href="#equation-a5475b8a-17d7-411f-aa3e-3e5bef07ec22" title="Permalink to this equation">¶</a></span>\[\begin{align}
+  |\mathit{z}|^2+|\mathit{w}|^2 &amp;= 1 \\
+  |\mathit{z}|^2-|\mathit{w}|^{\frac{2q}{p}} &amp;= 0; \\
+  |\mathit{w}|^2 + |\mathit{w}|^{\frac{2q}{p}} &amp;= 1;
+\end{align}\]</div>
 <p>así, los radios ahora están fijos y la superficie está parametrizada por las fases <span class="math notranslate nohighlight">\(\theta_\mathit{z}\)</span> y <span class="math notranslate nohighlight">\(\theta_\mathit{w}\)</span>, que están asociados a la dirección toroidal y poloidal, respectivamente.</p>
-<p>Dada las constricciones anteriores, proponemos una función de dos variables  complejas,$<span class="math notranslate nohighlight">\(\mathit{f(z,w)\equiv z^p+w^q=0,}\)</span><span class="math notranslate nohighlight">\(, está función representa una superficie, si sobre está superficie le añadimos las dos constricciones anteriores, esto es equivalente a imponer una constricción sobre el toro, lo cual nos lleva a definir líneas, los cuales corresponden a los nudos toroidales, 
-\begin{align}
+<p>Dada las constricciones anteriores, proponemos una función de dos variables  complejas,$<span class="math notranslate nohighlight">\(\mathit{f(z,w)\equiv z^p+w^q=0,}\)</span>$, está función representa una superficie, si sobre está superficie le añadimos las dos constricciones anteriores, esto es equivalente a imponer una constricción sobre el toro, lo cual nos lleva a definir líneas, los cuales corresponden a los nudos toroidales,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-352921bc-944b-4ede-a91b-12276b2307a4">
+<span class="eqno">(4)<a class="headerlink" href="#equation-352921bc-944b-4ede-a91b-12276b2307a4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 	|\mathit{z}|^pe^{\I p\theta_\mathit{z}}+\mathit{w}^qe^{\I q\theta_\mathit{w}}&amp;=0\quad \text{Expresando con la identidad de Euler}\\
 |\mathit{z}|^p\big(e^{\I p\theta_\mathit{z}}+e^{\I q \theta_\mathit{w}}\big)&amp;=0 \quad \text{donde}\quad|\mathit{z}|^p=|\mathit{w}|^q \\
 e^{\I p \theta_\mathit{z}}&amp;=-e^{\I q \theta_\mathit{w}}\quad \text{Multiplicamos por} \quad e^{-\I q \theta_\mathit{w}}\\
 e^{\I p \theta_\mathit{z}-\I q \theta_\mathit{w}}&amp;=-1=e^{-\I\pi}\\
- p \theta_\mathit{z}- q \theta_\mathit{w}&amp;=\pi \quad \text{(mod \)</span>2\pi$)}
-\end{align}
-Esta ecuacion define nudos para los valores de p y q primos relativos, en otros casos forma links.</p>
+ p \theta_\mathit{z}- q \theta_\mathit{w}&amp;=\pi \quad \text{(mod $2\pi$)}
+\end{align}\]</div>
+<p>Esta ecuacion define nudos para los valores de p y q primos relativos, en otros casos forma links.</p>
 <p>Con estos nudos tomamos los ceros de nuestra función <span class="math notranslate nohighlight">\(mathit{f(z,w)}\)</span> para las energías de Fermi de nuestro modelo, la parte real e imaginaria de <span class="math notranslate nohighlight">\(\mathit{f}\)</span> estarán asociados a nuestras dos funciones en nuestro modelo de bandas. Tomamos
 $<span class="math notranslate nohighlight">\(a_1=\mathbb{R}e(f) \quad a_3=\mathbb{I}m(f)\)</span>$</p>
 </div>

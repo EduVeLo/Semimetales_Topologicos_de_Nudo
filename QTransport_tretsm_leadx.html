@@ -225,13 +225,14 @@
   <div class="section" id="transporte-en-semimetal-topoogico-del-nudo-trebol">
 <h1>Transporte en Semimetal Topoógico del Nudo Trebol<a class="headerlink" href="#transporte-en-semimetal-topoogico-del-nudo-trebol" title="Permalink to this headline">¶</a></h1>
 <p>En el modelo tenemos un hamiltoniano effectivo de la aproximación de amarre fuerte, que se produce con los primos relativos (3,2), donde se incluye simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> y simetría de electrón-hueco <span class="math notranslate nohighlight">\(\mathcal{\Xi}\)</span>. Primero se plantea el hamiltoniano continuo a bajas energias, el cual esta asociado con las funciones:</p>
-<p>\begin{align}
-a_1(\vec{k}) &amp;=k_x^3-3k_Xk_y^2+k_z^2-(m-0.5k^2)^2 \quad ; \quad a_3(\vec{k})= 3k_x^2k_y-k_y^3+k_z(2m-k^2) \
-H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z +m_z\cdot \sigma_z
-\end{align}
-En este sistema finito analizamos la conductancia y las estructura de bandas en una terminal con el eje periódico en una dirección.
+<div class="amsmath math notranslate nohighlight" id="equation-63def7e3-2ca1-4e9e-bea4-ff2b655577c1">
+<span class="eqno">(15)<a class="headerlink" href="#equation-63def7e3-2ca1-4e9e-bea4-ff2b655577c1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+a_1(\vec{k}) &amp;=k_x^3-3k_Xk_y^2+k_z^2-(m-0.5k^2)^2 \quad ; \quad a_3(\vec{k})= 3k_x^2k_y-k_y^3+k_z(2m-k^2) \\
+H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z +m_z\cdot \sigma_z 
+\end{align}\]</div>
+<p>En este sistema finito analizamos la conductancia y las estructura de bandas en una terminal con el eje periódico en una dirección.
 Las unidades de energía en este sistema <span class="math notranslate nohighlight">\(\hbar v_f = 1\)</span></p>
-<p>https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.201305</p>
+<p><a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.201305">https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.201305</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -243,20 +244,6 @@ Las unidades de energía en este sistema <span class="math notranslate nohighlig
 <span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3714</span><span class="o">/</span><span class="mf">789382714.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">kwant</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">kwant.continuum</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;kwant&#39;
 </pre></div>
 </div>
 </div>

@@ -101,7 +101,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="NLInclinado.html">
-   Ahora estudiamos el código asociado al Nodal Line inclinado
+   Semimetal Topologico de Nodal Line inclinado
   </a>
  </li>
  <li class="toctree-l1">
@@ -241,10 +241,11 @@
 <div class="section" id="nudo-anillos-enlazados-linked-nodal-ring">
 <h2>Nudo Anillos Enlazados (Linked Nodal Ring)<a class="headerlink" href="#nudo-anillos-enlazados-linked-nodal-ring" title="Permalink to this headline">¶</a></h2>
 <p>En este modelo tenemos un hamiltoniano effectivo de la aproximación de amarre fuerte que se produce con los primos relativos (2,2), donde se incluye simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> y simetría de electrón-hueco <span class="math notranslate nohighlight">\(\mathcal{\Xi}\)</span>. Primero se plantea el hamiltoniano continuo a bajas energias, el cual esta asociado con las funciones:</p>
-<p>\begin{align}
-H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z\
+<div class="amsmath math notranslate nohighlight" id="equation-7988f467-1e48-4d97-a433-fb8de7bc5763">
+<span class="eqno">(14)<a class="headerlink" href="#equation-7988f467-1e48-4d97-a433-fb8de7bc5763" title="Permalink to this equation">¶</a></span>\[\begin{align}
+H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z\\
 a_1(\vec{k}) &amp;=k_x^2-k_y^2+k_z^2-(m-0.5k^2)^2 \quad; \quad a_3= 2k_xk_y+k_z(2m-k^2)
-\end{align}</p>
+\end{align}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -256,20 +257,6 @@ a_1(\vec{k}) &amp;=k_x^2-k_y^2+k_z^2-(m-0.5k^2)^2 \quad; \quad a_3= 2k_xk_y+k_z(
 <span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2789</span><span class="o">/</span><span class="mf">789382714.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">kwant</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">kwant.continuum</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;kwant&#39;
 </pre></div>
 </div>
 </div>
