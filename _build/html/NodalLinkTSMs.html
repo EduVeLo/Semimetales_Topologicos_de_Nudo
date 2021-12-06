@@ -250,23 +250,26 @@
 <h1>Topological Linked Nodal-Line Semimetals<a class="headerlink" href="#topological-linked-nodal-line-semimetals" title="Permalink to this headline">¶</a></h1>
 <p>Consultar un modelo similar con distinta proyeccion en:
 <a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.041103">Zhongbo Yan et al.</a></p>
-<p>En el modelo tenemos un hamiltoniano effectivo de la aproximación de amarre fuerte, que se produce con los primos relativos (2,2), donde se incluye simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> y simetría de electrón-hueco <span class="math notranslate nohighlight">\(\mathcal{\Xi}\)</span>. Primero se plantea el hamiltoniano continuo a bajas energias, el cual esta asociado con las funciones:
-\begin{align}
-H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z +m_z\cdot \sigma_z\
+<p>En el modelo tenemos un hamiltoniano effectivo de la aproximación de amarre fuerte, que se produce con los primos relativos (2,2), donde se incluye simetría <span class="math notranslate nohighlight">\(\mathcal{PT}\)</span> y simetría de electrón-hueco <span class="math notranslate nohighlight">\(\mathcal{\Xi}\)</span>. Primero se plantea el hamiltoniano continuo a bajas energias, el cual esta asociado con las funciones:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0ae1d13e-e8c0-49a3-9b83-814ecbefd38a">
+<span class="eqno">(8)<a class="headerlink" href="#equation-0ae1d13e-e8c0-49a3-9b83-814ecbefd38a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+H(\vec{k}) &amp;= a_1\cdot \sigma_x + a_3\cdot \sigma_z +m_z\cdot \sigma_z\\
 a_1(\vec{k}) =k_x^2-k_y^2+k_z^2&amp;-(m-0.5k^2)^2 \quad ; \quad a_3= 2k_xk_y+k_z(2m-k^2)
-\end{align}
-En el modelo de red propuesto es:
-\begin{align}
-a_1(\vec{k}) &amp;=\sin^2{k_x}-\sin^2{k_y}+\sin^2{k_z}-(\sum_j\cos{k_j}-m_0)^2 \
+\end{align}\]</div>
+<p>En el modelo de red propuesto es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-be671a8b-65f7-4ce4-87f1-854f8f43c778">
+<span class="eqno">(9)<a class="headerlink" href="#equation-be671a8b-65f7-4ce4-87f1-854f8f43c778" title="Permalink to this equation">¶</a></span>\[\begin{align}
+a_1(\vec{k}) &amp;=\sin^2{k_x}-\sin^2{k_y}+\sin^2{k_z}-(\sum_j\cos{k_j}-m_0)^2 \\
 a_3(\vec{k}) &amp;= 2\sin{k_x}\sin{k_y}+2\sin{k_z}(\sum_j\cos{k_j}-m_0)
-\end{align}
-donde se ha definido <span class="math notranslate nohighlight">\(m_0= 3-m\)</span>
-Expresamos las exponenciales de senos y cosenos como suma de angulos:
-\begin{align}
+\end{align}\]</div>
+<p>donde se ha definido <span class="math notranslate nohighlight">\(m_0= 3-m\)</span>
+Expresamos las exponenciales de senos y cosenos como suma de angulos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-160250ef-a5da-4063-a103-43aa5b33a8c0">
+<span class="eqno">(10)<a class="headerlink" href="#equation-160250ef-a5da-4063-a103-43aa5b33a8c0" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_1(\vec{k}) =&amp;-\frac{1}{2}\sum_j\cos{2k_j}-\cos{(k_x+k_y)}-\cos{(k_x-k_y)}-\cos{(k_x+k_z)}-\cos{(k_x-k_z)}-
-\cos{(k_y+k_z)}-\cos{(k_y-k_z)}+2(m_0-1)(\cos{k_x}+\cos{k_z})+2(m_0+1)\cos{k_y}+\frac{1}{2}-m_0^2 \
-a_3(\vec{k}) =&amp; = \cos (k_x - k_z)-\cos (k_x+k_z) +\sum_j(\sin( k_y + k_j )+\sin (k_y - k_j) ) - 2m_0 \sin k_y \
-\end{align}</p>
+        \cos{(k_y+k_z)}-\cos{(k_y-k_z)}+2(m_0-1)(\cos{k_x}+\cos{k_z})+2(m_0+1)\cos{k_y}+\frac{1}{2}-m_0^2 \\
+a_3(\vec{k}) =&amp; = \cos (k_x - k_z)-\cos (k_x+k_z) +\sum_j(\sin( k_y + k_j )+\sin (k_y - k_j) ) - 2m_0 \sin k_y \\
+\end{align}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
@@ -463,51 +466,6 @@ a_3(\vec{k}) =&amp; = \cos (k_x - k_z)-\cos (k_x+k_z) +\sum_j(\sin( k_y + k_j )+
     <span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="o">-</span><span class="mi">45</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;TransicionesLNLsinMasa_1.pdf&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/eduvela/anaconda3/envs/jbook/lib/python3.10/site-packages/scipy/optimize/minpack.py:175: RuntimeWarning: The iteration is not making good progress, as measured by the 
-  improvement from the last ten iterations.
-  warnings.warn(msg, RuntimeWarning)
-/home/eduvela/anaconda3/envs/jbook/lib/python3.10/site-packages/scipy/optimize/minpack.py:175: RuntimeWarning: The iteration is not making good progress, as measured by the 
-  improvement from the last five Jacobian evaluations.
-  warnings.warn(msg, RuntimeWarning)
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">timed</span> <span class="n">exec</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-
-<span class="nn">/tmp/ipykernel_3681/1534445111.py</span> in <span class="ni">Nodos</span><span class="nt">(NN, m0, mz)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="n">K</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">k0</span><span class="p">)):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>             <span class="n">root</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">feny</span><span class="p">,</span><span class="n">k0</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">k_j</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">m0</span><span class="p">,</span><span class="n">mz</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>             <span class="n">flag1</span> <span class="o">=</span> <span class="n">isclose</span><span class="p">(</span><span class="n">feny</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">k_j</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">m0</span><span class="p">,</span><span class="n">mz</span><span class="p">),[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span>             <span class="k">if</span> <span class="n">flag1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">flag1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-
-<span class="nn">~/anaconda3/envs/jbook/lib/python3.10/site-packages/scipy/optimize/minpack.py</span> in <span class="ni">fsolve</span><span class="nt">(func, x0, args, fprime, full_output, col_deriv, xtol, maxfev, band, epsfcn, factor, diag)</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>                <span class="s1">&#39;diag&#39;</span><span class="p">:</span> <span class="n">diag</span><span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span> 
-<span class="ne">--&gt; </span><span class="mi">160</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">_root_hybr</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">jac</span><span class="o">=</span><span class="n">fprime</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="k">if</span> <span class="n">full_output</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">162</span>         <span class="n">x</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
-
-<span class="nn">~/anaconda3/envs/jbook/lib/python3.10/site-packages/scipy/optimize/minpack.py</span> in <span class="ni">_root_hybr</span><span class="nt">(func, x0, args, jac, col_deriv, xtol, maxfev, band, eps, factor, diag, **unknown_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">235</span>         <span class="k">if</span> <span class="n">maxfev</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span>             <span class="n">maxfev</span> <span class="o">=</span> <span class="mi">200</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">237</span>         <span class="n">retval</span> <span class="o">=</span> <span class="n">_minpack</span><span class="o">.</span><span class="n">_hybrd</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xtol</span><span class="p">,</span> <span class="n">maxfev</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">238</span>                                  <span class="n">ml</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">epsfcn</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">diag</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">239</span>     <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">/tmp/ipykernel_3681/2469859330.py</span> in <span class="ni">feny</span><span class="nt">(k, k_y, m0, mz)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">def</span> <span class="nf">feny</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">k_y</span><span class="p">,</span><span class="n">m0</span><span class="o">=</span><span class="mf">2.8</span><span class="p">,</span> <span class="n">mz</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">suma</span> <span class="o">=</span>  <span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">k_y</span><span class="p">)</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">m0</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">a1</span> <span class="o">=</span>  <span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">k_y</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k_y</span><span class="p">)</span> <span class="o">+</span> <span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span><span class="n">suma</span><span class="o">*</span><span class="n">suma</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">a3</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k_y</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">suma</span> <span class="o">+</span> <span class="n">mz</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="k">return</span> <span class="p">[</span><span class="n">a1</span> <span class="p">,</span> <span class="n">a3</span><span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
